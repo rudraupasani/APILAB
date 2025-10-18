@@ -27,10 +27,10 @@ export default function Footer() {
             <div className="flex flex-col space-y-2 text-sm text-neutral-400">
               <Link
                 onClick={() => window.scrollTo(0, 0)}
-                to="/docs"
+                to="/APIS"
                 className="hover:text-white transition"
               >
-                Docs
+                Free APIs
               </Link>
               <Link
                 onClick={() => window.scrollTo(0, 0)}

@@ -46,16 +46,10 @@ export default function Home() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     onClick={() => navigate('/tester')}
-                                    className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition"
+                                    className="bg-blue-600 cursor-pointer hover:bg-blue-700 px-8 py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition"
                                 >
                                     Start Testing Now
                                     <ArrowRight size={20} />
-                                </motion.button>
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    className="border border-white/20 hover:border-white/50 px-8 py-3 rounded-lg font-bold transition"
-                                >
-                                    Watch Demo
                                 </motion.button>
                             </div>
                         </motion.div>

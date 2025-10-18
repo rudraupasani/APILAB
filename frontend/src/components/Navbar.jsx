@@ -41,10 +41,10 @@ export default function Navbar() {
                             window.scrollTo(0, 0);
                         }}
 
-                        to="/docs" className="text-neutral-200 hover:text-white transition font-medium">Docs</Link>
+                        to="/APIS" className="text-neutral-200 hover:text-white transition font-medium">Free APIs</Link>
                     <button
                         onClick={() => navigate('/tester')}
-                        className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 px-6 py-2 rounded-lg font-semibold text-white shadow-md hover:shadow-blue-500/30 transition"
+                        className="cursor-pointer bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 px-6 py-2 rounded-lg font-semibold text-white shadow-md hover:shadow-blue-500/30 transition"
                     >
                         Get Started
                     </button>
@@ -68,10 +68,10 @@ export default function Navbar() {
                             window.scrollTo(0, 0);
                         }}
 
-                        to="/docs" className="block text-neutral-200 hover:text-white font-medium transition">Docs</Link>
+                        to="/APIS" className="block text-neutral-200 hover:text-white font-medium transition">Free APIs</Link>
                     <button
                         onClick={() => navigate('/tester')}
-                        className="w-full bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-semibold text-white transition"
+                        className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-semibold text-white transition"
                     >
                         Get Started
                     </button>
