@@ -79,41 +79,105 @@ export default function Home() {
             </section>
 
             {/* Live Demo Preview Section */}
-            <section className="py-24 px-6 bg-[#0b0b0b] border-t border-white/10">
-                <div className="max-w-7xl mx-auto">
-                    <motion.div
-                        className="text-center mb-20"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-5xl font-bold text-white">Live Demo Preview</h2>
-                        <p className="text-neutral-400 mt-4 text-lg">
-                            See APILab in action with real-time API testing examples
-                        </p>
-                    </motion.div>
+           <section className="py-28 px-6 bg-[#000000] relative overflow-hidden">
 
-                    <motion.div
-                        className="relative bg-neutral-900/50 border border-white/10 rounded-2xl p-8 shadow-lg"
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="font-mono text-sm text-neutral-300 space-y-3">
-                            <p className="text-green-400">POST /api/demo/test</p>
-                            <p>
-                                Status: <span className="text-blue-400">201 Created</span> • 120ms
-                            </p>
-                            <pre className="bg-black/40 p-3 rounded-lg overflow-auto text-slate-300">{`{
+    {/* SOFT CYAN BACKLIGHT (very low glow) */}
+    <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_center,rgba(0,150,255,0.15),transparent_65%)]" />
+
+    <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* Title */}
+        <motion.div
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+        >
+            <h2 className="text-5xl font-bold text-white tracking-wide">
+                Live Demo Preview
+            </h2>
+            <p className="text-neutral-400 mt-4 text-lg">
+                See APILab in action with real-time API testing examples
+            </p>
+        </motion.div>
+
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 gap-10">
+            
+            {/* CARD 1 */}
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative bg-[#0f0f0f]/60 border border-white/5 
+                rounded-2xl p-8 backdrop-blur-md
+                shadow-[0_0_10px_rgba(0,0,0,0.5)]
+                hover:shadow-[0_0_18px_rgba(0,180,255,0.20)]
+                transition-all duration-300"
+            >
+                <h3 className="text-xl font-bold text-white mb-4">
+                    POST Request Demo
+                </h3>
+
+                <div className="font-mono text-sm text-neutral-300 space-y-3">
+                    <p className="text-green-400">POST /api/demo/test</p>
+
+                    <p>
+                        Status: <span className="text-blue-400">201 Created</span> • 120ms
+                    </p>
+
+                    <pre className="bg-black/40 p-4 rounded-lg text-slate-300 border border-white/5">{`{
   "demo": "success",
   "message": "Live API demo executed successfully"
 }`}</pre>
-                        </div>
-                    </motion.div>
                 </div>
-            </section>
+            </motion.div>
+
+            {/* CARD 2 */}
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                viewport={{ once: true }}
+                className="relative bg-[#0f0f0f]/60 border border-white/5 
+                rounded-2xl p-8 backdrop-blur-md
+                shadow-[0_0_10px_rgba(0,0,0,0.5)]
+                hover:shadow-[0_0_18px_rgba(0,180,255,0.20)]
+                transition-all duration-300"
+            >
+                <h3 className="text-xl font-bold text-white mb-4">
+                    GET Request Demo
+                </h3>
+
+                <div className="font-mono text-sm text-neutral-300 space-y-3">
+                    <p className="text-emerald-400">GET /api/demo/users</p>
+
+                    <p>
+                        Status: <span className="text-cyan-400">200 OK</span> • 98ms
+                    </p>
+
+                    <pre className="bg-black/40 p-4 rounded-lg text-cyan-200 border border-white/5">{`{
+  "users": [
+    { "id": 1, "name": "John Doe" },
+    { "id": 2, "name": "Alice" }
+  ]
+}`}</pre>
+                </div>
+            </motion.div>
+        </div>
+
+        {/* Soft underline */}
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="mt-20 h-[2px] w-full bg-gradient-to-r from-transparent 
+            via-[#00B4FF]/40 to-transparent"
+        />
+    </div>
+</section>
 
             {/* Features Section */}
             <section id="features" className="py-24 px-6 bg-black">
@@ -154,45 +218,103 @@ export default function Home() {
             </section>
 
             {/* How It Works Section */}
-            <section id="how-it-works" className="py-24 px-6 bg-[#0b0b0b] border-t border-white/10">
-                <div className="max-w-7xl mx-auto">
+           <section
+    id="how-it-works"
+    className="py-28 px-6 bg-[#000000] border-t border-white/10 relative overflow-hidden"
+>
+    {/* Soft cyan spotlight */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,150,255,0.10),transparent_70%)] opacity-20" />
+
+    <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Heading */}
+        <motion.div
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+        >
+            <h2 className="text-5xl font-bold text-white tracking-wide">How It Works</h2>
+            <p className="text-neutral-400 mt-4 text-lg">
+                Test, debug, and share your APIs in just a few clicks
+            </p>
+        </motion.div>
+
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+                {
+                    step: "1",
+                    title: "Write or Import Endpoint",
+                    desc: "Paste your API URL or import from Postman. Configure headers, parameters, and body instantly.",
+                    icon: <Code2 className="w-12 h-12 text-blue-400" />,
+                },
+                {
+                    step: "2",
+                    title: "Send Request & Inspect",
+                    desc: "Send requests in real-time and inspect JSON, headers, and status details instantly.",
+                    icon: <Zap className="w-12 h-12 text-yellow-400" />,
+                },
+                {
+                    step: "3",
+                    title: "Save & Share Results",
+                    desc: "Organize collections, share results, and track analytics for every request.",
+                    icon: <Shield className="w-12 h-12 text-green-400" />,
+                },
+            ].map((step, i) => (
+                <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    className="relative bg-[#0d0d0d]/60 backdrop-blur-md border border-white/5 
+                    rounded-2xl p-10 text-center shadow-[0_0_12px_rgba(0,0,0,0.45)]
+                    hover:shadow-[0_0_22px_rgba(0,170,255,0.25)] transition-all duration-300 group"
+                >
+                    {/* Icon */}
                     <motion.div
-                        className="text-center mb-20"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, scale: 0.85 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: i * 0.2 }}
+                        className="flex justify-center mb-6"
                     >
-                        <h2 className="text-5xl font-bold text-white">How It Works</h2>
-                        <p className="text-neutral-400 mt-4 text-lg">
-                            Test, debug, and share your APIs in just a few clicks
-                        </p>
+                        {step.icon}
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        {[
-                            { step: '1', title: 'Write or Import Endpoint', desc: 'Paste your API URL or import from Postman. Quickly configure headers, parameters, and body.', icon: <Code2 className="w-12 h-12 text-blue-400" /> },
-                            { step: '2', title: 'Send Request & Inspect', desc: 'Send instantly and view real-time response data, headers, and status with lightning speed.', icon: <Zap className="w-12 h-12 text-yellow-400" /> },
-                            { step: '3', title: 'Save & Share Results', desc: 'Store test collections, share with teammates, and access analytics for every API run.', icon: <Shield className="w-12 h-12 text-green-400" /> },
-                        ].map((step, i) => (
-                            <motion.div
-                                key={i}
-                                className="relative bg-neutral-900/50 border border-white/10 rounded-2xl p-8 text-center hover:border-blue-500 transition group"
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: i * 0.2 }}
-                                viewport={{ once: true }}
-                            >
-                                <div className="flex justify-center mb-6">{step.icon}</div>
-                                <h3 className="text-2xl font-semibold mb-3 text-white">{step.title}</h3>
-                                <p className="text-neutral-400">{step.desc}</p>
-                                <span className="absolute -top-4 -right-4 bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-lg">{step.step}</span>
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-10 rounded-2xl transition"></div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+                    {/* Title */}
+                    <h3 className="text-2xl font-semibold mb-3 text-white">
+                        {step.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-neutral-400 leading-relaxed">
+                        {step.desc}
+                    </p>
+
+                    {/* Step Number Badge */}
+                    <motion.span
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{ repeat: Infinity, duration: 2 }}
+                        className="absolute -top-4 -right-4 bg-blue-600 text-white rounded-full 
+                        w-12 h-12 flex items-center justify-center text-xl font-bold 
+                        shadow-[0_0_12px_rgba(0,150,255,0.35)] border border-white/10"
+                    >
+                        {step.step}
+                    </motion.span>
+
+                    {/* Soft hover glow */}
+                    <div
+                        className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent 
+                        opacity-0 group-hover:opacity-10 rounded-2xl transition-all duration-300"
+                    ></div>
+                </motion.div>
+            ))}
+        </div>
+    </div>
+</section>
+
 
             {/* FAQ Section */}
             <section id="faq" className="py-24 px-6 bg-black border-t border-white/10">

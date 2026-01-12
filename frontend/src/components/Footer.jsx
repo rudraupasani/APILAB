@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 py-16 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          
+
           {/* Logo & Description */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
@@ -16,6 +16,7 @@ export default function Footer() {
               </div>
               <span className="font-bold text-white text-lg">APILab</span>
             </div>
+            {/* helo */}
             <p className="text-neutral-400 text-sm">
               Modern API testing for developers
             </p>

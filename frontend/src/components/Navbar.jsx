@@ -35,12 +35,18 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-10">
-                    <a href="#features" className="text-neutral-200 hover:text-white transition font-medium">Features</a>
+                    <Link>
+                    
+                    </Link>
                     <Link
                         onClick={() => {
                             window.scrollTo(0, 0);
                         }}
-
+                        to="/docs" className="text-neutral-200 hover:text-white transition font-medium">Docs</Link>
+                    <Link
+                        onClick={() => {
+                            window.scrollTo(0, 0);
+                        }}
                         to="/APIS" className="text-neutral-200 hover:text-white transition font-medium">Free APIs</Link>
                     <button
                         onClick={() => navigate('/tester')}
